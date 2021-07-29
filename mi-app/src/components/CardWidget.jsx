@@ -4,7 +4,7 @@ import Icon from '../img/logo.png';
 const Icons = () =>
     <>
     <div class="my-2">
-    <img src={Icon}/>
+    <label>Cheddar</label><img src={Icon}/><label>Bar</label>
     </div>
     </>
 
