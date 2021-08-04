@@ -1,8 +1,9 @@
+import ItemList from "./ItemList";
 
-const ItemListContainer = ({greeting}) => (
-    <div class="text-center">
-        <h3 class="mt-4">
-            {greeting}
+const ItemListContainer = () => (
+    <div className="text-center">
+        <h3 className="mt-4">
+           <ItemList/>
         </h3>
     </div>
 );
