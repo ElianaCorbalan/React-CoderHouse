@@ -1,3 +1,5 @@
+
+import ItemCount from "./ItemCount";
 const ItemDetail = ({ product }) => {
 
     return (
@@ -8,6 +10,7 @@ const ItemDetail = ({ product }) => {
                         <img style={{ width: '35px' }} src={product.image} alt='' />
                         <p className="card-text fs-6">{product.description}</p>
                         <p className="card-text">${product.price}</p>
+                        <ItemCount initial={1} stock={5}/>
                     </div>
                 </div>
             }

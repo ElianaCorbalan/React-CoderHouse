@@ -21,13 +21,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }
     }
     return (
-        <div className="text-center card w-50">
+        <div className="text-center card w-100">
             <div className="card-body">
-                <h5 className="card-title">Producto X</h5>
                 <div className="d-flex mb-2  justify-content-center">
-                    <button type="button" className="btn btn-success" onClick={incrementoContador}>+</button>
+                    <button type="button" className="btn btn-success" onClick={decrementoContador}>-</button>
                     <div className="mx-2">{contador}</div>
-                    <button type="button" className="btn btn-danger" onClick={decrementoContador}>-</button>
+                    <button type="button" className="btn btn-danger" onClick={incrementoContador}>+</button>
                 </div>
                 <div className="d-flex justify-content-center">
                 <button type="button" className="btn btn-warning"onClick={confirmar}>Agregar</button>

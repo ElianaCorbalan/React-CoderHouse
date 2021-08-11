@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ItemListContainer from "./components/Items/ItemListContainer";
 import ItemDetailContainer from "./components/Items/ItemDetailContainer";
-//Componentes 
+
 const App = () => {
 
     return (
