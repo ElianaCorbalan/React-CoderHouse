@@ -1,5 +1,4 @@
 import ItemList from "./ItemList";
-import Loader from "react-loaders";
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router";
 
@@ -17,7 +16,6 @@ const ItemListContainer = () => {
         <div className="row justify-content-center">
             <div className="text-center">
                 <h3 className="mt-4">
-                    <Loader type="ball-clip-rotate-multiple" active/>
                     <ItemList products={products} />
                 </h3>
             </div>

@@ -12,7 +12,6 @@ const ItemDetailContainer = () => {
         fetch(`https://fakestoreapi.com/products/${id}`).then(res => res.json()).then(json => setProduct({...json, quantity : 10}))
     }, [id])
 
-
     return (
         <div className="text-center">
             <h3 className="mt-4">
