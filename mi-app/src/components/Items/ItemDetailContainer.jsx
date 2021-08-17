@@ -8,7 +8,8 @@ const ItemDetailContainer = () => {
 
 
     useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${id}`).then(res => res.json()).then(json => setProduct(json))
+        //seteo cantidad de stock en 10
+        fetch(`https://fakestoreapi.com/products/${id}`).then(res => res.json()).then(json => setProduct({...json, quantity : 10}))
     }, [id])
 
 

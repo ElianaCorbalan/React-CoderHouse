@@ -1,10 +1,10 @@
-import Carrito from '../img/carrito.png';
+import Logo from '../img/logoUnicornio.png';
+import { NavLink } from "react-router-dom"
+
 const Icons = () => {
     return (<>
-        <div className="my-2">
-            <label>Tienda</label>
-            <img style={{ width: '35px' }} src={Carrito} alt='' />
-            <label>Mia</label>
+        <div>
+            <NavLink to={`/`}><img style={{ width: '80px' }} src={Logo} alt='logo' /></NavLink>
         </div>
     </>)
 }
