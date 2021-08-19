@@ -3,12 +3,14 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ItemListContainer from "./components/Items/ItemListContainer";
 import ItemDetailContainer from "./components/Items/ItemDetailContainer";
-import CartContainer from "./components/CartContainer";
+import CartContainer from "./Context/CartContainer";
+import CustomProvider from "./Context/CartContext";
 
 const App = () => {
 
     return (
         <BrowserRouter>
+        <CustomProvider>
             <Header />
             <NavBar categories={null} />
             <Switch>
@@ -17,6 +19,7 @@ const App = () => {
                 <Route path="/detail/:id" component={ItemDetailContainer}/>
                 <Route path="/cart" component={CartContainer}/>
             </Switch>
+        </CustomProvider>
         </BrowserRouter>
     )
 }

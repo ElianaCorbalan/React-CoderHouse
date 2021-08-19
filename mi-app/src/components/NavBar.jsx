@@ -1,5 +1,5 @@
-import Carrito from '../img/carrito.png';
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import CartWidget from "../Context/CartWidget";
 
 const NavBar = () =>
     <>
@@ -9,10 +9,10 @@ const NavBar = () =>
             <NavLink to={`/categories/jewelery`} className="nav-link text-warning" href="#top">Jewelery</NavLink>
             <NavLink to={`/categories/men's clothing`} className="nav-link text-warning" href="#top">Men's clothing</NavLink>
             <NavLink to={`/categories/women's clothing`} className="nav-link text-warning" href="#top">Women's clothing</NavLink>
-            <img src={Carrito} alt="" />
+            <CartWidget/>
         </nav>
         <div>
-            <h2 class="text-center my-4">NUESTROS<span class="text-warning"> PRODUCTOS</span></h2>
+            <h2 className="text-center my-4">NUESTROS<span className="text-warning"> PRODUCTOS</span></h2>
         </div>
     </>
 

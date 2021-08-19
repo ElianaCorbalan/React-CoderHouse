@@ -1,13 +1,23 @@
 
 import ItemCount from "./ItemCount";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { contexto } from '../../Context/CartContext';
 
 const ItemDetail = ({ product }) => {
+    const { addItem } = useContext(contexto);
+
     const [terminar, setTerminar] = useState(false);
     const [cantidad, setCantidad] = useState();
 
     const onAdd = (cantidad) => {
+        const agregarItem = {
+            products : product ,
+            quantity : cantidad
+        }
+
+        addItem(agregarItem);
+
         setCantidad(cantidad);
         setTerminar(true);
     }
@@ -23,7 +33,7 @@ const ItemDetail = ({ product }) => {
                         <p className="card-text">${product.price}</p>
                         {!terminar && <ItemCount initial={1} onAdd={(cantidad) => onAdd(cantidad)} stock={product.quantity} />}
                         {terminar && <div className="d-flex justify-content-center">
-                            <NavLink to={`/cart?${product.id}&cant=${cantidad}`} className="btn btn-success mt-3">Terminar mi compra</NavLink>
+                            <NavLink to={`/cart?${product.id}&cant=${cantidad}`} className="btn btn-success mt-3">Terminar compra</NavLink>
                         </div>}
                     </div>
                 </div>
