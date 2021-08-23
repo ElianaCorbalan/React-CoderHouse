@@ -2,8 +2,8 @@ import Cart from "./Cart"
 
 const CartContainer = () => {
     return (
-        <div className="row justify-content-center">
-            <div className="text-center">
+        <div className="container card bg-light w-50">
+            <div className="text-center ">
                 <Cart/>
             </div>
         </div>

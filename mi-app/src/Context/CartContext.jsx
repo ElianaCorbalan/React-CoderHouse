@@ -19,7 +19,9 @@ const CustomProvider = ({children}) => {
     const clear = () => {
         setCart([]);
     }
+
     
+
     const contexto_para_consumir = {cart,addItem,removeItem,clear}
     return (
         <Provider value ={contexto_para_consumir}>

@@ -10,7 +10,7 @@ const CartWidget = () => {
     return (
         <NavLink to="/cart">
             <img src={Carrito} alt="" />
-            {cart.length ? cart.length : null}
+            {cart.reduce((acumulador, products) => acumulador + products.quantity, 0)}
         </NavLink>
     )
 }
