@@ -1,3 +1,4 @@
+import { Spinner } from "reactstrap";
 import ItemList from "./ItemList";
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router";
@@ -54,9 +55,9 @@ const ItemListContainer = () => {
 
     if (estado === "pendiente") {
         return(
-            <>
-            <h3>Estado pendiente</h3>
-            </>
+            <div className="row justify-content-center align-items-center mt-5">
+            <Spinner color="warning"/>
+            </div>
         )
     }else{
         return(
