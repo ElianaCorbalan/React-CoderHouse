@@ -11,7 +11,7 @@ const Cart = () => {
             {cart.map(product =>
                 <div className="card" key={product.products.id}>
                     <div>
-                        <img style={{ width: '70px'}} src={product.products.image} alt=""></img>
+                        <img style={{ width: '180px'}} src={product.products.imageId} alt=""></img>
                     </div>
                     <h4><strong>${product.products.price * product.quantity}</strong></h4>
                     <p className="d-inline text-uppercase">{product.products.title} x {product.quantity}Unid/</p>

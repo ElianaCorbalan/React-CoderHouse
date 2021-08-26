@@ -15,7 +15,7 @@ const App = () => {
             <NavBar categories={null} />
             <Switch>
                 <Route path="/" component={ItemListContainer} exact/>
-                <Route path="/categories/:id" component={ItemListContainer}/>
+                <Route path="/categories/:category" component={ItemListContainer}/>
                 <Route path="/detail/:id" component={ItemDetailContainer}/>
                 <Route path="/cart" component={CartContainer}/>
             </Switch>

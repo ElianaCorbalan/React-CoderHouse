@@ -9,10 +9,9 @@ const NavBar = () => {
             <>
         <nav className="nav justify-content-center navbar-dark bg-dark bg-gradient">
             <NavLink to={`/`} className="nav-link active text-warning" aria-current="page" href="#top">Home</NavLink>
-            <NavLink to={`/categories/electronics`} className="nav-link text-warning" href="#top">Electronics</NavLink>
-            <NavLink to={`/categories/jewelery`} className="nav-link text-warning" href="#top">Jewelery</NavLink>
-            <NavLink to={`/categories/men's clothing`} className="nav-link text-warning" href="#top">Men's clothing</NavLink>
-            <NavLink to={`/categories/women's clothing`} className="nav-link text-warning" href="#top">Women's clothing</NavLink>
+            <NavLink to={`/categories/Cremas`} className="nav-link text-warning" href="#top">Cremas</NavLink>
+            <NavLink to={`/categories/accesorios`} className="nav-link text-warning" href="#top">Accesorios</NavLink>
+            <NavLink to={`/categories/MakeUp`} className="nav-link text-warning" href="#top">Make Up</NavLink>
             {cart.length > 0 ?
             <CartWidget/>:''}
         </nav>

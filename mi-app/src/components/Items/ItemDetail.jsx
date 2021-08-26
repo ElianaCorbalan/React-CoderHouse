@@ -24,14 +24,14 @@ const ItemDetail = ({ product }) => {
 
 
     return (
-        <div className="row row-cols-2 row-cols-md-4 g-2 mx-auto container justify-content-center">
+        <div className="row row-cols-2 row-cols-md-2 g-2 mx-auto container justify-content-center">
             {product &&
                 <div className="card text-dark bg-light mb-3">
                     <div className="card-body">
-                        <img style={{ width: '70px' }} src={product.image} alt='' />
+                        <img style={{ width: '260px' }} src={product.imageId} alt='' />
                         <p className="card-text fs-6">{product.description}</p>
                         <p className="card-text">${product.price}</p>
-                        {!terminar && <ItemCount initial={1} onAdd={(cantidad) => onAdd(cantidad)} stock={product.quantity} />}
+                        {!terminar && <ItemCount initial={1} onAdd={(cantidad) => onAdd(cantidad)} stock={product.stock} />}
                         {terminar && <div className="d-flex justify-content-center">
                             <NavLink to={`/cart?${product.id}&cant=${cantidad}`} className="btn btn-success mt-3">Terminar compra</NavLink>
                         </div>}

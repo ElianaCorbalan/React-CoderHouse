@@ -1,23 +1,50 @@
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router";
+import { firestore } from "../../firebase";
 
 const ItemDetailContainer = () => {
-    const { id } = useParams();
-    const [product, setProduct] = useState();
 
+    const [product, setProduct] = useState();
+    const [estado, setEstado] = useState("pendiente");
+    const { id } = useParams();
 
     useEffect(() => {
-        //seteo cantidad de stock en 10
-        fetch(`https://fakestoreapi.com/products/${id}`).then(res => res.json()).then(json => setProduct({...json, quantity : 10}))
+
+        const db = firestore
+        const collection = db.collection("items");
+        
+        if (id) {
+            const filtrar = collection.doc(id)
+            const query = filtrar.get();
+            query.then((results) => {
+                const id = results.id;
+                const data = results.data()
+                const dataFinal = { id, ...data}
+                setProduct(dataFinal)
+            }).catch((error)=> {
+                console.log(error)
+            }).finally(()=> {
+                setEstado("finalizado")
+            })
+        }else {
+            setEstado("finalizado")
+        }
     }, [id])
 
-    return (
-        <div className="text-center">
-            <h3 className="mt-4">
-                <ItemDetail product={product} />
-            </h3>
-        </div>)
+    if(estado === "pendiente") {
+        return (
+            <h3>Estado pendiente</h3>
+        )
+    } else {
+        return (
+            <div className="text-center">
+                <h3 className="mt-4">
+                    <ItemDetail product={product} />
+                </h3>
+            </div>
+            )
+        }
 };
 
 export default ItemDetailContainer;
