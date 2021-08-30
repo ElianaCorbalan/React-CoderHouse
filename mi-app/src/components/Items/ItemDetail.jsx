@@ -6,7 +6,6 @@ import { contexto } from '../../Cart/CartContext';
 
 const ItemDetail = ({ product }) => {
     const { addItem } = useContext(contexto);
-
     const [terminar, setTerminar] = useState(false);
     const [cantidad, setCantidad] = useState();
 
@@ -15,14 +14,11 @@ const ItemDetail = ({ product }) => {
             products : product ,
             quantity : cantidad
         }
-
+        
         addItem(agregarItem);
-
         setCantidad(cantidad);
         setTerminar(true);
     }
-
-
     return (
         <div className="row row-cols-2 row-cols-md-2 g-2 mx-auto container justify-content-center">
             {product &&

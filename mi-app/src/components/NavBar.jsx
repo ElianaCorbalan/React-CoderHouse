@@ -7,7 +7,7 @@ const NavBar = () => {
         let { cart } = useContext(contexto)
         return (
             <>
-        <nav className="nav justify-content-center navbar-dark bg-dark bg-gradient">
+        <nav className="nav justify-content-center navbar-dark bg-dark">
             <NavLink to={`/`} className="nav-link active text-warning" aria-current="page" href="#top">Home</NavLink>
             <NavLink to={`/categories/Cremas`} className="nav-link text-warning" href="#top">Cremas</NavLink>
             <NavLink to={`/categories/accesorios`} className="nav-link text-warning" href="#top">Accesorios</NavLink>
