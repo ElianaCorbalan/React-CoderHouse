@@ -1,4 +1,4 @@
-# ECOMMERCE REACT.JS
+# E-COMMERCE REACT.JS
 
 Este es mi proyecto final para el curso de ReactJS en CoderHouse, parte de la carrera de desarrollador web full-stack MERN
 Este proyecto consiste en una app e-commerce implementada con React, React Router, React Hooks, Librería de Bootstrap y Firebase como base de datos. 
