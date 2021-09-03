@@ -73,7 +73,7 @@ export default function Footer() {
                                 </p>
                             </Link>
                             <Link
-                                to='/Cremas'
+                                to='/categories/Cremas'
                                 className='col-12 text-decoration-none'
                             >
                                 <p className='m-0 fs-6 text-start text-white'>
@@ -81,7 +81,7 @@ export default function Footer() {
                                 </p>
                             </Link>
                             <Link
-                                to='/MakeUp'
+                                to='/categories/MakeUp'
                                 className='col-12 text-decoration-none'
                             >
                                 <p className='m-0 fs-6 text-start text-white'>
@@ -89,7 +89,7 @@ export default function Footer() {
                                 </p>
                             </Link>
                             <Link
-                                to='/Accesorios'
+                                to='/categories/accesorios'
                                 className='col-12 text-decoration-none'
                             >
                                 <p className='m-0 fs-6 text-start text-white'>

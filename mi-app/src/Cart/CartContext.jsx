@@ -11,15 +11,15 @@ const CustomProvider = ({ children }) => {
     const [email, setEmail] = useState("");
     const [precioTotal, setPrecioTotal] = useState(0);
 
-    const addItem = (product) => {
-        if (inCart(product.id)) {
-            const newCant = product.quantity + cart[cart.findIndex(e => e.product.id === product.products.id)].quantity;
-            const newCart = { ...product, quantity: newCant }
-
-            const carritoActual = cart.filter((e) => e.products.id !== product.products.id);
+    const addItem = (p) => {
+        if (inCart(p.products.id)) {
+            const newCant = p.quantity + cart[cart.findIndex(e => e.products.id === p.products.id)].quantity;
+            console.log(newCant)
+            const newCart = { ...p, quantity: newCant }
+            const carritoActual = cart.filter((e) => e.products.id !== p.products.id);
             setCart([...carritoActual, newCart])
         } else {
-            setCart([...cart, product])
+            setCart([...cart, p])
         }
     }
 
