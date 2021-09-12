@@ -27,9 +27,9 @@ const ItemDetail = ({ product }) => {
                         <img style={{ width: '260px' }} src={product.imageId} alt='' />
                         <p className="card-text fs-6">{product.description}</p>
                         <p className="card-text">${product.price}</p>
-                        {!terminar && <ItemCount initial={1} onAdd={(cantidad) => onAdd(cantidad)} stock={product.stock} />}
+                        {!terminar && <ItemCount initial={1} onAdd={(cantidad) => onAdd(cantidad)} stock={product.stock} isConfirm={true} />}
                         {terminar && <div className="d-flex justify-content-center">
-                            <NavLink to={`/cart?${product.id}&cant=${cantidad}`} className="btn btn-success mt-3">Terminar compra</NavLink>
+                            <NavLink to={`/cart?${product.id}&cant=${cantidad}`} className="btn btn-success mt-3">Ir al carrito</NavLink>
                         </div>}
                     </div>
                 </div>

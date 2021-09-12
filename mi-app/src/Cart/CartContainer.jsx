@@ -2,7 +2,7 @@ import Cart from "./Cart"
 
 const CartContainer = () => {
     return (
-        <div className="container card bg-light w-50">
+        <div className="container bg-light ">
             <div className="text-center ">
                 <Cart/>
             </div>

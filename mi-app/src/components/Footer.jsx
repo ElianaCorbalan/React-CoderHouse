@@ -16,7 +16,7 @@ export default function Footer() {
                                         <i className='bi bi-instagram'></i>
                                     </div>
                                     <div className='col'>
-                                        <p className='m-0'><i class="fab fa-instagram"></i> Instagram</p>
+                                        <p className='m-0'><i className="fab fa-instagram"></i> Instagram</p>
                                     </div>
                                 </div>
                                 <div className='row'>
@@ -24,7 +24,7 @@ export default function Footer() {
                                         <i className='bi bi-telephone'></i>
                                     </div>
                                     <div className='col'>
-                                        <p className='m-0'><i class="fas fa-phone-alt"></i> Telefono</p>
+                                        <p className='m-0'><i className="fas fa-phone-alt"></i> Telefono</p>
                                     </div>
                                 </div>
                                 <div className='row'>
@@ -32,7 +32,7 @@ export default function Footer() {
                                         <i className='bi bi-envelope'></i>
                                     </div>
                                     <div className='col'>
-                                        <p className='m-0'><i class="fas fa-at"></i> Email</p>
+                                        <p className='m-0'><i className="fas fa-at"></i> Email</p>
                                     </div>
                                 </div>
                             </div>

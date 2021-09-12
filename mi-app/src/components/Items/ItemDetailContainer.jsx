@@ -24,7 +24,6 @@ const ItemDetailContainer = () => {
                 const dataFinal = { id, ...data}
                 setProduct(dataFinal)
             }).catch((error)=> {
-                console.log(error)
             }).finally(()=> {
                 setEstado("finalizado")
             })

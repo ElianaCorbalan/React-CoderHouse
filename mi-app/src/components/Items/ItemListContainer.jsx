@@ -25,11 +25,9 @@ const ItemListContainer = () => {
                     const dataFinal = { id, ...data}
                     resultadosParse.push(dataFinal)
                 });
-
                 setProducts(resultadosParse)
-                
             }).catch((error)=> {
-                console.log(error)
+                return(error)
             }).finally(()=> {
                 setEstado("finalizado")
             })
@@ -45,7 +43,7 @@ const ItemListContainer = () => {
             });
             setProducts(resultadosParse)
         }).catch((error)=>{
-            console.log(error)
+            return(error)
         }).finally(()=>{
             setEstado("finalizado")
         });
