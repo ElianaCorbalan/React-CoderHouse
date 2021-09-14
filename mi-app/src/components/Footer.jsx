@@ -40,7 +40,7 @@ export default function Footer() {
                     </div>
                     <div className='col-md-4 text-white'>
                         <div className='row mb-2'>
-                            <p className='m-0 fs-5 text-center fw-bold'>Suscribete a nuestro Newsletter</p>
+                            <p className='m-0 fs-5 text-center fw-bold'>Recibí las últimas novedades</p>
                         </div>
                         <form className='row gx-2 align-items-center'>
                             <div className='col-9'>

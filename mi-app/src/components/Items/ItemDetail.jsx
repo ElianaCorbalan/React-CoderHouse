@@ -1,4 +1,3 @@
-
 import ItemCount from "./ItemCount";
 import { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
@@ -29,7 +28,8 @@ const ItemDetail = ({ product }) => {
                         <p className="card-text">${product.price}</p>
                         {!terminar && <ItemCount initial={1} onAdd={(cantidad) => onAdd(cantidad)} stock={product.stock} isConfirm={true} />}
                         {terminar && <div className="d-flex justify-content-center">
-                            <NavLink to={`/cart?${product.id}&cant=${cantidad}`} className="btn btn-success mt-3">Ir al carrito</NavLink>
+                            <NavLink to={`/cart?${product.id}&cant=${cantidad}`} className="btn btn-outline-warning mt-3">Ir al carrito</NavLink>
+                            <NavLink to={`/`} className="btn btn-ligth mt-3"> Seguir comprando</NavLink>
                         </div>}
                     </div>
                 </div>

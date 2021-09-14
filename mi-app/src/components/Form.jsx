@@ -43,13 +43,13 @@ const Form = () => {
                 total: precioTotal,
             };
             pedidos.add(newPedido).then(({ id }) => {
-                setPedidoId(id); // succes
+                setPedidoId(id); 
                 setError(false)
                 setProcesado(true)
                 setTotal(precioTotal)
                 clear();
             }).catch(error => {
-                setError(error); // error
+                setError(error); 
             }).finally(() => {
                 setError(false)
                 setEmail("");
@@ -86,12 +86,11 @@ const Form = () => {
                         {cart && (
                             <button type="submit" className="btn btn-warning" onClick={realizarPedido}>Enviar y Finalizar</button>
                         )}
-
                     </form>
                 </div>
                 {
                     procesado ?
-                        <div className="alert alert-success col-md-6 p-3" role="alert">
+                        <div className="alert alert-success col-md-6 p-3 m-5" style={{ width:'400px', height:'250px'}} role="alert">
                             <h4 className="alert-heading">Excelente!</h4>
                             <p>Su compra ha sido procesada con éxito por un total de $ {total}</p>
                             <strong><h5 className="pedido">Número de orden: <span> {pedidoId}</span></h5></strong>

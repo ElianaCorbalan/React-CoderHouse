@@ -12,18 +12,18 @@ const App = () => {
 
     return (
         <BrowserRouter>
-        <CustomProvider>
-            <Header />
-            <NavBar categories={null} />
-            <Switch>
-                <Route path="/" component={ItemListContainer} exact/>
-                <Route path="/categories/:category" component={ItemListContainer}/>
-                <Route path="/detail/:id" component={ItemDetailContainer}/>
-                <Route path="/cart" component={CartContainer}/>
-                <Route path="/Form" component={Form}/>
-            </Switch>
-            <Footer/>
-        </CustomProvider>
+            <CustomProvider>
+                <Header />
+                <NavBar categories={null} />
+                    <Switch>
+                        <Route path="/" component={ItemListContainer} exact />
+                        <Route path="/categories/:category" component={ItemListContainer} />
+                        <Route path="/detail/:id" component={ItemDetailContainer} />
+                        <Route path="/cart" component={CartContainer} />
+                        <Route path="/Form" component={Form} />
+                    </Switch>
+                <Footer />
+            </CustomProvider>
         </BrowserRouter>
     )
 }

@@ -4,26 +4,22 @@ import { NavLink } from "react-router-dom";
 
 const Cart = () => {
     const { cart, removeItem, clear,precioTotal } = useContext(contexto);
-    const { changeQuantityItem } = useContext(contexto);
+    const { addItem } = useContext(contexto);
 
     const incrementoContador = (p) => {
-
-        if (p.quantity < p.products.stock) onChangeQuantity({...p, quantity : p.quantity+1})
+        if (p.quantity < p.products.stock) onChangeQuantity({...p, quantity : 1})
     };
 
     const decrementoContador = (p) => {
-
-        if (p.quantity > 1) onChangeQuantity({...p , quantity : p.quantity-1})
+        if (p.quantity > 1) onChangeQuantity({...p , quantity : -1})
     }
 
     const onChangeQuantity = (p) =>{
-
         const agregarItem = {
             products : p.products ,
             quantity : p.quantity
         }
-
-        changeQuantityItem(agregarItem);
+        addItem(agregarItem);
     }
     return (
         <>
@@ -40,7 +36,7 @@ const Cart = () => {
                     </tr>
                 </thead>
                 <tbody>
-                {cart.map(product =>
+                {cart.length > 0 && cart.map(product =>
                     <tr key={product.products.id}>
                     <th><img className="align-items-start" style={{ width:'100px', height:'70px'}}src={product.products.imageId} alt="" align="left"></img>{product.products.title}</th>
                     <td>${product.products.price}</td>

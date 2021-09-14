@@ -13,27 +13,22 @@ const CustomProvider = ({ children }) => {
 
     const addItem = (p) => {
         if (inCart(p.products.id)) {
-            debugger;
-            const newCant = p.quantity + cart[cart.findIndex(e => e.products.id === p.products.id)].quantity;
+            let index = cart.findIndex(e => e.products.id === p.products.id);
+            const newCant = p.quantity + cart[index].quantity;
             const newCart = { ...p, quantity: newCant }
-            const carritoActual = cart.filter((e) => e.products.id !== p.products.id);
-            setCart([...carritoActual, newCart])
+            const carritoActual = [...cart]
+            carritoActual[index] = newCart
+            setCart(carritoActual)
         } else {
             setCart([...cart, p])
         }
-    }
-
-    const changeQuantityItem = (p) => {
-        const newCart = { ...p, quantity: p.quantity }
-        const carritoActual = cart.filter((e) => e.products.id !== p.products.id);
-        setCart([...carritoActual, newCart])
-        
     }
 
     const removeItem = (id) => {
         let elements = cart.filter((e) => e.products.id !== id)
         setCart(elements);
     }
+
     const clear = () => {
         setCart([]);
         setPrecioTotal();
@@ -47,7 +42,7 @@ const CustomProvider = ({ children }) => {
         setPrecioTotal(cart.reduce((acumulador, product) => acumulador + product.products.price * product.quantity, 0).toFixed(2));
     }, [cart])
 
-    const contexto_para_consumir = { cart, addItem, removeItem, clear, inCart, setPrecioTotal, precioTotal, changeQuantityItem, nombre, setNombre, telefono, setTelefono, email, setEmail }
+    const contexto_para_consumir = { cart, addItem, removeItem, clear, inCart, setPrecioTotal, precioTotal, nombre, setNombre, telefono, setTelefono, email, setEmail }
     return (
         <Provider value={contexto_para_consumir}>
             {children}

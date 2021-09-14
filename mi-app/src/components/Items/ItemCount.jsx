@@ -25,9 +25,9 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <div className="text-center card w-100">
             <div className="card-body">
                 <div className="d-flex mb-2  justify-content-center">
-                    <button type="button" className="btn btn-danger" onClick={decrementoContador}>-</button>
+                    <button type="button" className="btn btn-outline-secondary" onClick={decrementoContador}>-</button>
                     <div className="mx-2">{contador}</div>
-                    <button type="button" className="btn btn-success" onClick={incrementoContador}>+</button>
+                    <button type="button" className="btn btn-outline-secondary" onClick={incrementoContador}>+</button>
                 </div>
                 <div className="d-flex justify-content-center">
                 <button type="button" className="btn btn-warning"onClick={confirmar}>Agregar</button>
